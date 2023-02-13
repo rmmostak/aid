@@ -15,6 +15,7 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:textColor="@color/black"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:gravity="center"
@@ -25,12 +26,38 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textSize="25dp" />
 
-    <ImageView
-        android:id="@+id/home"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/preCaution"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="20dp"
         android:layout_weight="2"
-        android:src="@drawable/home" />
+        android:background="@color/gray"
+        android:clickable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/purple_500"
+                android:lineHeight="30dp"
+                android:padding="10dp"
+                android:text="@string/precautions"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/fishCat"
@@ -41,19 +68,27 @@
         android:background="@color/gray"
         android:clickable="true"
         app:cardCornerRadius="10dp"
-        app:cardElevation="3dp"
-        app:contentPadding="10dp">
+        app:cardElevation="3dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:lineHeight="30dp"
-            android:padding="10dp"
-            android:text="@string/tag_line"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textSize="25dp" />
+            android:layout_height="match_parent"
+            android:background="@drawable/quality">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:lineHeight="30dp"
+                android:padding="10dp"
+                android:text="@string/tag_line"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 

@@ -24,6 +24,7 @@
             android:gravity="center"
             android:lineHeight="30dp"
             android:padding="5dp"
+            android:textColor="@color/black"
             android:text="@string/do_level_selection"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -60,6 +61,7 @@
                         android:lineHeight="30dp"
                         android:padding="5dp"
                         android:text="@string/zeroto4"
+                        android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:textSize="30dp" />
@@ -99,6 +101,7 @@
                         android:background="@color/white"
                         android:lineHeight="30dp"
                         android:padding="5dp"
+                        android:textColor="@color/black"
                         android:text="@string/fiveto12"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"

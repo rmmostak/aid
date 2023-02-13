@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,19 +16,28 @@
         android:theme="@style/Theme.IntelligentFishDB"
         tools:targetApi="31">
         <activity
-            android:name=".CategoryC"
-            android:exported="false"
-            android:label="@string/category_do_lime"
-            android:parentActivityName=".Symptoms">
+            android:name=".Feedback"
+            android:label="@string/feed_back"
+            android:parentActivityName=".HomePage"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CategoryB"
+            android:name=".Medicine"
             android:exported="false"
-            android:label="@string/category_probiotic"
-            android:parentActivityName=".Symptoms">
+            android:label="@string/medicine"
+            android:parentActivityName=".CategorySymp">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Manual"
+            android:exported="false"
+            android:label="@string/manual"
+            android:parentActivityName=".CategorySymp">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -34,6 +46,42 @@
             android:name=".Symptoms"
             android:exported="false"
             android:label="@string/symptoms"
+            android:parentActivityName=".CategorySymp">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PreCaution"
+            android:exported="false"
+            android:label="@string/precautions"
+            android:parentActivityName=".HomePage">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CategoryC"
+            android:exported="false"
+            android:label="@string/category_do_lime"
+            android:parentActivityName=".Medicine">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CategoryB"
+            android:exported="false"
+            android:label="@string/category_probiotic"
+            android:parentActivityName=".Medicine">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CategorySymp"
+            android:exported="false"
+            android:label="@string/categories"
             android:parentActivityName=".FishPage">
             <meta-data
                 android:name="android.app.lib_name"
@@ -43,7 +91,7 @@
             android:name=".CategoryA"
             android:exported="false"
             android:label="@string/category_do_medicine"
-            android:parentActivityName=".Symptoms">
+            android:parentActivityName=".Medicine">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -32,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:textColor="@color/black"
             android:background="@color/white"
             android:lineHeight="30dp"
             android:text="@string/carp_fish"
@@ -67,6 +68,7 @@
             android:background="@color/white"
             android:lineHeight="30dp"
             android:text="@string/tilapia"
+            android:textColor="@color/black"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textSize="25dp" />
@@ -99,6 +101,7 @@
             android:background="@color/white"
             android:lineHeight="30dp"
             android:text="@string/cat_fish"
+            android:textColor="@color/black"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textSize="25dp" />
@@ -131,6 +134,7 @@
             android:background="@color/white"
             android:lineHeight="30dp"
             android:text="@string/mixed_fish"
+            android:textColor="@color/black"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textSize="25dp" />

@@ -14,8 +14,15 @@
         android:padding="10dp">
 
         <TextView
-            style="@style/sympTitle"
-            android:text="@string/medicine" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:paddingBottom="5dp"
+            android:text="@string/instruction_choose_only"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            tools:ignore="RtlCompat" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,15 +100,61 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/insTitle"
-                android:text="@string/reference" />
+                style="@style/medicineTitle"
+                android:text="@string/ecorich" />
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/fish_ref" />
+                android:layout_width="215dp"
+                android:layout_height="300dp"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ecorich"
+                android:textAlignment="viewStart" />
+
+            <TextView
+                style="@style/insTitle"
+                android:text="@string/ingredients" />
+
+            <TextView
+                style="@style/textBody"
+                android:text="@string/category_ecorich_ingredient" />
+
+            <TextView
+                style="@style/insTitle"
+                android:text="@string/dosage_and_administration" />
+
+            <TextView
+                style="@style/textBody"
+                android:text="@string/dosage_ecorich" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/oval_yellow"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/insTitle"
+                    android:text="@string/cautions" />
+
+                <TextView
+                    style="@style/textBody"
+                    android:text="@string/caution_zeo" />
+
+            </LinearLayout>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/gray" />
 
     </LinearLayout>
 

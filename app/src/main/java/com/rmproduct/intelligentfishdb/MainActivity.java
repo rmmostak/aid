@@ -2,6 +2,10 @@ package com.rmproduct.intelligentfishdb;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +16,14 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import com.rmproduct.intelligentfishdb.databinding.ActivityMainBinding;
 
+import android.util.DisplayMetrics;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +33,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("appLanguage", MODE_PRIVATE);
+        String appLang = sharedPreferences.getString("lang", Locale.getDefault().getLanguage());
+
+        Locale myLocale = new Locale(appLang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        Locale.setDefault(myLocale);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            conf.setLayoutDirection(myLocale);
+        }
+        res.updateConfiguration(conf, dm);
+
         setContentView(R.layout.activity_main);
 
         welcome = findViewById(R.id.welcome);

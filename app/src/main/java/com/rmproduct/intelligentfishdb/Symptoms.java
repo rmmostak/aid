@@ -1,39 +1,36 @@
 package com.rmproduct.intelligentfishdb;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
-import android.app.ActivityOptions;
-import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+
+import java.util.Locale;
 
 public class Symptoms extends AppCompatActivity {
-
-    private CardView catA, catB, catC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_symptoms);
 
-        catA =findViewById(R.id.catA);
-        catB =findViewById(R.id.catB);
-        catC =findViewById(R.id.catC);
+        SharedPreferences sharedPreferences = getSharedPreferences("appLanguage", MODE_PRIVATE);
+        String appLang = sharedPreferences.getString("lang", Locale.getDefault().getLanguage());
 
-        catA.setOnClickListener(view -> {
-            Intent intent = new Intent(Symptoms.this, CategoryA.class);
-            ActivityOptions options = ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.fade_in, R.anim.fade_out);
-            startActivity(intent, options.toBundle());
-        });
-        catB.setOnClickListener(view -> {
-            Intent intent = new Intent(Symptoms.this, CategoryB.class);
-            ActivityOptions options = ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.fade_in, R.anim.fade_out);
-            startActivity(intent, options.toBundle());
-        });
-        catC.setOnClickListener(view -> {
-            Intent intent = new Intent(Symptoms.this, CategoryC.class);
-            ActivityOptions options = ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.fade_in, R.anim.fade_out);
-            startActivity(intent, options.toBundle());
-        });
+        Locale myLocale = new Locale(appLang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        Locale.setDefault(myLocale);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            conf.setLayoutDirection(myLocale);
+        }
+        res.updateConfiguration(conf, dm);
+
+        setContentView(R.layout.activity_symptoms2);
     }
 }
