@@ -88,5 +88,6 @@
     <string name="feed_back">FeedBack</string>
     <string name="write_name">Please write your name!</string>
     <string name="write_someting">Please write something!</string>
+    <string name="send">Send</string>
 
 </resources>

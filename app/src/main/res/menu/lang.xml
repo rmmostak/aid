@@ -5,7 +5,7 @@
     <item
         android:id="@+id/feedback"
         android:enabled="true"
-        android:title="Feedback"
+        android:title="@string/feed_back"
         android:visible="true"
         app:showAsAction="never" />
 

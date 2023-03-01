@@ -44,6 +44,8 @@ public class Feedback extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
 
+        getSupportActionBar().setTitle(R.string.feed_back);
+
         name = findViewById(R.id.name);
         comment = findViewById(R.id.comment);
         rating = findViewById(R.id.rating);

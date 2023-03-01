@@ -32,5 +32,6 @@ public class Manual extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
 
         setContentView(R.layout.activity_manual);
+        getSupportActionBar().setTitle(R.string.manual);
     }
 }

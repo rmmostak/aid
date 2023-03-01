@@ -15,6 +15,7 @@ public class Medicine extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicine);
+        getSupportActionBar().setTitle(R.string.medicine);
 
         doc = findViewById(R.id.catA);
         prob = findViewById(R.id.catB);

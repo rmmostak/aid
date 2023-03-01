@@ -32,5 +32,6 @@ public class PreCaution extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
 
         setContentView(R.layout.activity_pre_caution);
+        getSupportActionBar().setTitle(R.string.precautions);
     }
 }

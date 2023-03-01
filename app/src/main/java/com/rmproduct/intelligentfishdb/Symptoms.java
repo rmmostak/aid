@@ -32,5 +32,7 @@ public class Symptoms extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
 
         setContentView(R.layout.activity_symptoms2);
+
+        getSupportActionBar().setTitle(R.string.symptoms);
     }
 }
